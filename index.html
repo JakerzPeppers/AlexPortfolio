@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Turingan - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+   <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: #d3d3d3;
+            background-color: #f8f8ff;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(135deg, #2b1a1c, #441a2d); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 100, 0.3);
+    overflow-y: auto;
+}
+
+    
+        .welcome {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #00ffff;
+        }
+        .header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 20px;
+            position: relative;
+        }
+        .header img {
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            border: 6px solid #00ffff;
+            cursor: pointer;
+            object-fit: cover;
+            transition: border 0.3s ease-in-out, transform 0.2s ease-in-out;
+            position: absolute;
+            top: 50px;
+            left: 60px;
+        }
+        .header img:hover {
+            border: 6px solid #ffcc00;
+            transform: scale(1.05);
+        }
+        .info {
+            text-align: left;
+            margin-left: 300px;
+            padding-top: 20px;
+        }
+        .info h1 {
+            color: #ffd700;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 2.1rem;
+            margin-bottom: 10px;
+        }
+        .info p {
+            font-family: 'Roboto' sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .about-me {
+            text-align: left;
+            margin-top: -30px;
+            margin-left: -280px;
+            padding: 10px;
+            border-radius: 5px;
+            color: #ffcc00;
+        }
+        .achievements {
+            margin-top: 10px;
+            padding: 10px;
+            color: #ffcc00;
+            border-radius: 5px;
+        }
+        .achievements button {
+            background: #ffa500;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-family: 'bebas neue', sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .achievements button:hover {
+            background: #ff69b4;
+            color: black;
+        }
+        .achievement-images {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 80px;
+        }
+        .achievement-images img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: border 0.3s ease-in-out;
+        }
+        .achievement-images img:hover {
+            border: 2px solid #4906a1;
+            box-shadow: 0px 0px 10px #4906a1;
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+        }       
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        
+        .proficient-languages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -25px;
+    margin-left: 306px;
+}
+
+.language-logos {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.language-logos img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+}
+
+.proficient-languages p {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-left: 15px; 
+}
+
+.skills, .experience, .services {
+    margin-top: 10px;
+    padding: 10px;
+    color: #ffcc00;
+    border-radius: 5px;
+}
+
+.skills button, .experience button, .services button {
+    background: #ffa500;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: 'bebas neue', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.skills button:hover, .experience button:hover, .services button:hover {
+    background: #ff69b4;
+    color: black;
+}
+
+.toggle-content {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+    </style>
+    <script>
+        function openFullscreen(src) {
+            const fullscreenDiv = document.createElement("div");
+            fullscreenDiv.classList.add("fullscreen");
+            fullscreenDiv.onclick = () => document.body.removeChild(fullscreenDiv);
+            
+            const img = document.createElement("img");
+            img.src = src;
+            
+            fullscreenDiv.appendChild(img);
+            document.body.appendChild(fullscreenDiv);
+        }
+        function toggleAchievements() {
+            const achievements = document.getElementById("achievementList");
+            achievements.style.display = achievements.style.display === "none" ? "flex" : "none";
+        }
+        function toggleSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.style.display = section.style.display === "none" ? "block" : "none";
+}
+
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="welcome"> Welcome to My Web Portfolio! </div>
+        <div class="header">
+            <img src="profile.jpeg" alt="Jake's Photo" onclick="openFullscreen(this.src)">
+            <div class="info">
+                <h1> Alexander Turingan </h1>
+                <p> <strong>Birthday:</strong> December 1, 2004</p>
+                <p> <strong>Age:</strong> 20</p>
+                <p> <strong>Address:</strong> Fatima Vill. Bajada D.C.</p>
+                <p> <strong>Contact:</strong> 09676578767</p>
+                <p> <strong>Status:</strong> Single </p>
+                <p>🎓 <strong>Year Level:</strong> 2nd Year BSCS</p>
+            </div>
+        </div>
+
+   
+        <div class="proficient-languages">
+            <p>🖥️ <strong>Proficient Languages:</strong></p>
+            <div class="language-logos">
+                <img src="html.png" alt="HTML">
+                <img src="css.png" alt="CSS">
+                <img src="javascript.png" alt="JavaScript">
+                <img src="python.png" alt="Python">
+                <img src="java.png" alt="Java">
+            </div>
+        </div>
+        
+        <div class="skills">
+            <button onclick="toggleSection('skillsList')">🚀 Skills 🎨</button>
+            <div id="skillsList" class="toggle-content">
+                <p>- 🧠 Advanced Analytical Thinking & Decision-Making </p>
+                <p>- 🏆 Strong Leadership & Effective Communication</p>
+                <p>- 💻 Proficiency in Computer Science & Software Development</p>
+                <p>- 🤖 Critical Thinking & Complex Problem-Solving</p>
+            </div>
+        </div>
+
+        <div class="experience">
+            <button onclick="toggleSection('experienceList')">💼 Experience 📂</button>
+            <div id="experienceList" class="toggle-content">
+                <p>- Web Development & Problem Solving
+                    Builds and optimizes web applications with a focus on performance and user experience.</p>
+                <p>- UI/UX & Frontend Design
+                    Creates responsive, visually appealing interfaces using HTML, CSS, JavaScript, and frameworks like React.js.</p>
+                <p>- Backend & Database Management
+                    Develops secure, scalable systems with Node.js, Python, and MySQL/Firebase.</p>
+            </div>
+        </div>
+
+        <div class="services">
+            <button onclick="toggleSection('servicesList')">🛠️ Services 💡</button>
+            <div id="servicesList" class="toggle-content">
+                <p>- 🖥 Web Development & Design</p>
+                <p>- ⚙️ Software Development & Optimization</p>
+                <p>- 📚 Computer Science & Programming Tutoring</p>
+                <p>- 🤖 Tech Consulting & Problem Solving </p>
+            </div>
+        </div>
+
+
+        <div class="achievements">
+            <button onclick="toggleAchievements()">🏆 Achievements 🏆</button>
+            <div id="achievementList" class="achievement-images">
+                <img src="certificate.jpeg" alt="Achievement 1" onclick="openFullscreen(this.src)">
+                <img src="certificate 2.jpeg" alt="Achievement 2" onclick="openFullscreen(this.src)">
+                <img src="certificate 3.jpeg" alt="Achievement 3" onclick="openFullscreen(this.src)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
